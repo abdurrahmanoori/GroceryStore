@@ -1,0 +1,49 @@
+﻿@model IEnumerable<GroceryStore.Models.ItemStoreKeeperAndCategoryModel>
+@{
+    ViewData["Title"] = "Index";
+}
+<div class="float-right">
+    <a class="btn btn-primary btn-lg" asp-action="Create">Create Item</a>
+</div>
+
+<div class="container">
+
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Category</th>
+                <th>Price</th>
+                <th>Description</th>
+                <th>Company</th>
+                <th>Made In</th>
+                <th>Expire tDate</th>
+                <th>Photo</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@item.Name</td>
+                    <td>@item.Category</td>
+                    <td>@item.RealPrice</td>
+                    <td>@item.Description</td>
+                    <td>@item.Company</td>
+                    <td>@item.MadeIn</td>
+                    <td>@item.ExpireDate</td>
+                    <td>@item.Photo</td>
+
+                    <td>
+                        <div class="btn btn-group w-50">
+                            <a class="btn btn-primary mr-2" asp-route-id="@item.Id" asp-action="Edit">Edit</a>
+                            <a class="btn btn-danger " asp-route-id="@item.Id" asp-action="Delete">Delete</a>
+                        </div>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

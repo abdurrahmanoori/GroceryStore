@@ -1,0 +1,45 @@
+﻿@model GroceryStore.Models.ItemStoreKeeper
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit Store Keeper Item</h1>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-6">
+            <form asp-action="Edit" method="post">
+                <div class="form-group">
+                    <label asp-for="Name"></label>
+                    <input class="form-control" asp-for="Name" placeholder="Enter Item Name" />
+                </div>
+                <div class="form-group">
+                    <label asp-for="Company"></label>
+                    <input class="form-control" asp-for="Company" />
+                </div>
+                <div class="form-group">
+                    <label asp-for="RealPrice"></label>
+                    <input class="form-control" asp-for="RealPrice" />
+                </div>
+                <div class="form-group">
+                    <label asp-for="Description"></label>
+                    <input class="form-control" asp-for="Description" />
+                </div>
+                <div class="form-group">
+                    <label asp-for="MadeIn"></label>
+                    <input class="form-control" asp-for="MadeIn" />
+                </div>
+                <div class="form-group">
+                    <label asp-for="Profit"></label>
+                    <input class="form-control" asp-for="Profit" />
+                </div>
+                <div class="form-group">
+                    <label asp-for="Category"></label>
+                    <select class="form-control" asp-for="CategoryId" asp-items="@(new SelectList(ViewBag.CategoryList,"Id","Name"))">
+                    </select>
+                </div>
+                <button type="submit" class="btn btn-primary btn-lg">Update</button>
+                <a class="btn btn-warning btn-lg" asp-action="Index">Back</a>
+            </form>
+        </div>
+    </div>
+</div>

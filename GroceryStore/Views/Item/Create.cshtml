@@ -1,0 +1,27 @@
+﻿@model GroceryStore.Models.Item
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create Item</h1>
+<form asp-action="Create" method="post">
+    <div class="form-group">
+        <label asp-for="ItemStoreKeeper.Name"></label>
+        <input class="form-control" asp-for="ItemStoreKeeper.Name" placeholder="Enter Item Name" />
+    </div>
+    <div class="form-group">
+        <label asp-for="Price"></label>
+        <input class="form-control" asp-for="Price" />
+    </div>
+    <div class="form-group">
+        <label asp-for="ItemStoreKeeper.Category"></label>
+        <select class="form-control" asp-for="ItemStoreKeeper.CategoryId" asp-items="@(new SelectList(ViewBag.CategoryList,"Id","Name"))">
+        </select>
+    </div>
+
+    @*<div class="form-group">
+            <label asp-for="CategoryId">Category Id</label>
+            <input class="form-control" placeholder="1-Washing 2-Eating 3-Kids 4-Tanbako" asp-for="CategoryId" />
+        </div>*@
+    <button type="submit" class="btn btn-primary">Save</button>
+</form>
