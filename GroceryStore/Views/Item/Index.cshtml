@@ -1,11 +1,10 @@
-﻿@model IEnumerable<GroceryStore.Models.Item>
+﻿@model IEnumerable<GroceryStore.ViewModels.ItemIndexViewModel>
 @{
     ViewData["Title"] = "Index";
 }
 <div class="float-right">
     <a class="btn btn-primary btn-lg" asp-action="Create">Create Item</a>
 </div>
-
 <div class="container">
 
     <table class="table table-hover">
@@ -14,6 +13,8 @@
                 <th>Name</th>
                 <th>Category</th>
                 <th>Price</th>
+                <th>Discount</th>
+                <th>Photo</th>
                 <th></th>
             </tr>
         </thead>
@@ -21,9 +22,11 @@
             @foreach (var item in Model)
             {
                 <tr>
-                    <td>@item.ItemStoreKeeper.Name</td>
-                    <td>@item.ItemStoreKeeper.Category.Name</td>
+                    <td>@item.Name</td>
+                    <td>@item.Category</td>
                     <td>@item.Price</td>
+                    <td>@item.Discount</td>
+                    <td>@item.Photo</td>
 
                     <td>
                         <div class="btn btn-group w-50">
