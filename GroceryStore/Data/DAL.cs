@@ -9,7 +9,7 @@ namespace GroceryStore.Data
 {
     class DAL
     {
-        public SqlConnection con = new SqlConnection("server=.;Database=GroceryStoreMIS;Trusted_Connection=True;MultipleActiveResultSets=True");
+        public SqlConnection con = new SqlConnection("server=.;Database=GroceryStoreMISNew;Trusted_Connection=True;MultipleActiveResultSets=True");
         public SqlCommand cmd = new SqlCommand();
         public SqlDataAdapter da = new SqlDataAdapter();
         public SqlDataReader dr;

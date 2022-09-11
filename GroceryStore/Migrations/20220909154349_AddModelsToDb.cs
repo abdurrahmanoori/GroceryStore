@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace GroceryStore.Migrations
 {
-    public partial class addModelsToDb : Migration
+    public partial class AddModelsToDb : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -77,20 +77,22 @@ namespace GroceryStore.Migrations
                 name: "Item",
                 columns: table => new
                 {
-                    Id = table.Column<int>(nullable: false),
+                    Id = table.Column<int>(nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
                     Price = table.Column<int>(nullable: true),
                     Profit = table.Column<int>(nullable: true),
-                    Discount = table.Column<int>(nullable: true)
+                    Discount = table.Column<int>(nullable: true),
+                    ItemStoreKepeerId = table.Column<int>(nullable: true)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Item", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_Item_itemStoreKeeper_Id",
-                        column: x => x.Id,
+                        name: "FK_Item_itemStoreKeeper_ItemStoreKepeerId",
+                        column: x => x.ItemStoreKepeerId,
                         principalTable: "itemStoreKeeper",
                         principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
+                        onDelete: ReferentialAction.Restrict);
                 });
 
             migrationBuilder.CreateTable(
@@ -193,6 +195,13 @@ namespace GroceryStore.Migrations
                 name: "IX_Chart_UserId",
                 table: "Chart",
                 column: "UserId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Item_ItemStoreKepeerId",
+                table: "Item",
+                column: "ItemStoreKepeerId",
+                unique: true,
+                filter: "[ItemStoreKepeerId] IS NOT NULL");
 
             migrationBuilder.CreateIndex(
                 name: "IX_ItemDetail_ItemId",

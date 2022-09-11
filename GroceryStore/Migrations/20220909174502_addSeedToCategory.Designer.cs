@@ -10,8 +10,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace GroceryStore.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20220901165308_addModelsToDb")]
-    partial class addModelsToDb
+    [Migration("20220909174502_addSeedToCategory")]
+    partial class addSeedToCategory
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -35,6 +35,13 @@ namespace GroceryStore.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Category");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 10,
+                            Name = "Eeating"
+                        });
                 });
 
             modelBuilder.Entity("GroceryStore.Models.Chart", b =>
@@ -80,9 +87,14 @@ namespace GroceryStore.Migrations
             modelBuilder.Entity("GroceryStore.Models.Item", b =>
                 {
                     b.Property<int>("Id")
-                        .HasColumnType("int");
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
                     b.Property<int?>("Discount")
+                        .HasColumnType("int");
+
+                    b.Property<int?>("ItemStoreKepeerId")
                         .HasColumnType("int");
 
                     b.Property<int?>("Price")
@@ -92,6 +104,10 @@ namespace GroceryStore.Migrations
                         .HasColumnType("int");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("ItemStoreKepeerId")
+                        .IsUnique()
+                        .HasFilter("[ItemStoreKepeerId] IS NOT NULL");
 
                     b.ToTable("Item");
                 });
@@ -248,9 +264,7 @@ namespace GroceryStore.Migrations
                 {
                     b.HasOne("GroceryStore.Models.ItemStoreKeeper", "ItemStoreKeeper")
                         .WithOne("Item")
-                        .HasForeignKey("GroceryStore.Models.Item", "Id")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("GroceryStore.Models.Item", "ItemStoreKepeerId");
                 });
 
             modelBuilder.Entity("GroceryStore.Models.ItemDetail", b =>

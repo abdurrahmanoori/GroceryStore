@@ -9,18 +9,22 @@ namespace GroceryStore.Models
 {
     public class Item
     {
-        [ForeignKey("ItemStoreKeeper"), Key]
+
+        
         public int Id { get; set; }
         public int? Price { get; set; }
         public int? Profit { get; set; }
         public int? Discount { get; set; }
+        [ForeignKey("ItemStoreKeeper")]
+        public int? ItemStoreKepeerId { get; set; }
         public virtual ItemStoreKeeper ItemStoreKeeper { get; set; }
 
-        //public string Description { get; set; }
-        //public string? Photo { get; set; }
-        //        public string CompanyName { get; set; }
-
-        //public int? ItemStoreKeeperId { get; set; }
+        //[ForeignKey("ItemStoreKeeper"), Key]
+        //public int Id { get; set; }
+        //public int? Price { get; set; }
+        //public int? Profit { get; set; }
+        //public int? Discount { get; set; }
+        //public virtual ItemStoreKeeper ItemStoreKeeper { get; set; }
 
     }
 }

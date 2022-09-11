@@ -41,21 +41,71 @@ namespace GroceryStore.Controllers
         //GET Create
         public IActionResult Create()
         {
-            ViewBag.ItemList = _db.itemStoreKeeper.ToList();
-            ViewBag.CategoryList = _db.Category.ToList();
-            return View();
+            ItemCreateViewModel item = new ItemCreateViewModel();
+            item.itemStoreKeepersList =  _db.itemStoreKeeper.ToList();
+            
+   //         ViewBag.ItemList = _db.itemStoreKeeper.ToList();
+            //ViewBag.CategoryList = _db.Category.ToList();
+            return View(item);
         }
         //POST Create
         [HttpPost]
-        public IActionResult Create(Item item)
+        public IActionResult Create(ItemCreateViewModel itemCreateViewModel)
         {
+            
+            Item item = new Item
+            {
+                
+                ItemStoreKepeerId=itemCreateViewModel.Id,
+                Price = itemCreateViewModel.Price,
+                Profit = itemCreateViewModel.Profit,
+                Discount = itemCreateViewModel.Discount
+            };
+            
             _db.Item.Add(item);
             _db.SaveChanges();
             return RedirectToAction("Index");
         }
-        public IActionResult Edit()
+        public IActionResult Edit(int id)
         {
-
+            return View(_db.Item.Find(id));
         }
+        [HttpPost]
+        public IActionResult Edit(Item item)
+        {
+            if (ModelState.IsValid)
+            {
+                _db.Item.Update(item);   
+                _db.SaveChanges();
+                return RedirectToAction("Index");
+            }
+            return View();
+        }
+        public IActionResult Delete(int id)
+        {
+            return View(_db.Item.Find(id));
+        }
+        [HttpPost]
+        public IActionResult Delete(Item item)
+        {
+            if(item != null)
+            {
+                _db.Item.Remove(item);
+                _db.SaveChanges();
+                return RedirectToAction("Index");
+            }
+            return View(item);
+        }
+
+        //public IActionResult Delete(int id)
+        //{
+        //    if(_db.Item.Find(id) != null)
+        //    {
+        //        _db.Item.Remove(_db.Item.Find(id));
+        //        _db.SaveChanges();
+        //        Redirect
+        //    }
+        //}
+
     }
 }

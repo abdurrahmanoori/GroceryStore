@@ -21,5 +21,22 @@ namespace GroceryStore.Data
         public DbSet<Users> Users { get; set; }
         public DbSet<Category> Category { get; set; }
 
+        protected override void OnModelCreating(ModelBuilder builder)
+        {
+            builder.Entity<Item>()
+                .HasIndex(u => u.ItemStoreKepeerId)
+                .IsUnique();
+
+            builder.Entity<Category>().HasData(
+                new Category { Name="Eeating",Id=10}
+                );
+
+            builder.Entity<Category>().HasData(
+                new Category { Name="Washing",Id=1}
+                );
+        }
+
+       
+
     }
 }
