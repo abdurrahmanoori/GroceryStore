@@ -44,8 +44,6 @@ namespace GroceryStore.Controllers
             ItemCreateViewModel item = new ItemCreateViewModel();
             item.itemStoreKeepersList =  _db.itemStoreKeeper.ToList();
             
-   //         ViewBag.ItemList = _db.itemStoreKeeper.ToList();
-            //ViewBag.CategoryList = _db.Category.ToList();
             return View(item);
         }
         //POST Create

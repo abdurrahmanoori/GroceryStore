@@ -13,27 +13,26 @@ namespace GroceryStore.Data
         {
 
         }
-
         public DbSet<ItemStoreKeeper> itemStoreKeeper { get; set; }
         public DbSet<Item> Item { get; set; }
         public DbSet<ItemDetail> ItemDetail { get; set; }
         public DbSet<Chart> Chart { get; set; }
         public DbSet<Users> Users { get; set; }
         public DbSet<Category> Category { get; set; }
-
+        public DbSet<Admin> Admin { get; set; }
         protected override void OnModelCreating(ModelBuilder builder)
         {
             builder.Entity<Item>()
                 .HasIndex(u => u.ItemStoreKepeerId)
                 .IsUnique();
 
-            builder.Entity<Category>().HasData(
-                new Category { Name="Eeating",Id=10}
-                );
+            //builder.Entity<Category>().HasData(
+            //    new Category { Name="Eeating",Id=10}
+            //    );
 
-            builder.Entity<Category>().HasData(
-                new Category { Name="Washing",Id=1}
-                );
+            //builder.Entity<Category>().HasData(
+            //    new Category { Name="Washing",Id=1}
+            //    );
         }
 
        

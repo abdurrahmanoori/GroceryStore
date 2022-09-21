@@ -18,9 +18,7 @@ namespace GroceryStore.Models
         public int? RealPrice { get; set; }
         public string? Photo { get; set; }
         public string? MadeIn { get; set; }
-
         public byte? Type { get; set; } //First, Second...
-
         public int? Quantity { get; set; }
 
         public DateTime? ExpireDate { get; set; }

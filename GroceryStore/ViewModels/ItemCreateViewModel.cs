@@ -11,6 +11,8 @@ namespace GroceryStore.ViewModels
     {
         
         public int Id { get; set; }
+        public byte Type { get; set; }
+        public string Company { get; set; }
         public int Price{ get; set; }
         public int Profit { get; set; }
         public int Discount { get; set; }
