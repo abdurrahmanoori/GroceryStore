@@ -59,7 +59,7 @@ namespace GroceryStore.Controllers
                 Profit = itemCreateViewModel.Profit,
                 Discount = itemCreateViewModel.Discount
             };
-            
+
             _db.Item.Add(item);
             _db.SaveChanges();
             return RedirectToAction("Index");

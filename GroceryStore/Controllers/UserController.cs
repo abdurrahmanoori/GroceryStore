@@ -14,7 +14,7 @@ namespace GroceryStore.Controllers
         {
             _db = db;
         }
-        public IActionResult Check()
+        public IActionResult Login()
         {
             return View();
         }

@@ -143,4 +143,4 @@ C:\Users\Abdurrahman\source\repos\GroceryStore\GroceryStore\obj\Debug\netcoreapp
 C:\Users\Abdurrahman\source\repos\GroceryStore\GroceryStore\obj\Debug\netcoreapp3.0\Razor\Views\Admin\Details.cshtml.g.cs
 C:\Users\Abdurrahman\source\repos\GroceryStore\GroceryStore\obj\Debug\netcoreapp3.0\Razor\Views\Admin\Edit.cshtml.g.cs
 C:\Users\Abdurrahman\source\repos\GroceryStore\GroceryStore\obj\Debug\netcoreapp3.0\Razor\Views\Admin\Index.cshtml.g.cs
-C:\Users\Abdurrahman\source\repos\GroceryStore\GroceryStore\obj\Debug\netcoreapp3.0\Razor\Views\User\Check.cshtml.g.cs
+C:\Users\Abdurrahman\source\repos\GroceryStore\GroceryStore\obj\Debug\netcoreapp3.0\Razor\Views\User\Login.cshtml.g.cs
