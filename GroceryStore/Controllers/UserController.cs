@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using GroceryStore.Data;
+using GroceryStore.Models;
 using Microsoft.AspNetCore.Mvc;
 
 namespace GroceryStore.Controllers
@@ -25,9 +26,26 @@ namespace GroceryStore.Controllers
         }
 
         //GET
+        [HttpGet]
         public IActionResult Create()
         {
             return View();
+
+        }
+        [HttpPost]
+        public IActionResult Create(Users users )
+        {
+            if (users != null)
+            {
+                if (ModelState.IsValid)
+                {
+                    _db.Users.Add(users);
+                    _db.SaveChanges();
+                    return RedirectToAction("Index");
+
+                }
+            }
+            return View(User);
         }
     }
 }
