@@ -1,29 +1,60 @@
-﻿
-
+﻿@model GroceryStore.Models.Users
 @*<div class="col-10 offset-1 d-flex justify-content-center" >*@
 <div class="container">
     <div class="row">
         <div class="col-6">
-            <form method="post">
+            <form asp-action="Create" asp-controller="User" method="post">
                 <h2>Register</h2>
                 <p class="hint-text">Create your account. It's free and only takes a minute.</p>
                 <div class="form-group">
                     <div class="row">
-                        <div class="col"><input type="text" class="form-control" name="first_name" placeholder="First Name" required="required"></div>
-                        <div class="col"><input type="text" class="form-control" name="last_name" placeholder="Last Name" required="required"></div>
+                        <label asp-for="Name"></label>
+                        <div class="col"><input asp-for="Name" class="form-control" placeholder="First Name"></div>
+                        <label asp-for="LastName"></label>
+                        <div class="col"><input asp-for="LastName" class="form-control" placeholder="Last Name"></div>
                     </div>
                 </div>
                 <div class="form-group">
-                    <input type="email" class="form-control" name="email" placeholder="Email" required="required">
+                    <div class="row">
+                        <label asp-for="Phone1"></label>
+                        <div class="col"><input asp-for="Phone1" class="form-control" placeholder="Phone"></div>
+                        <label asp-for="Phone2"></label>
+                        <div class="col"><input asp-for="Phone2" class="form-control" placeholder="Phone"></div>
+                    </div>
                 </div>
                 <div class="form-group">
-                    <input type="password" class="form-control" name="password" placeholder="Password" required="required">
+                    <div class="row">
+                        <label asp-for="Province"></label>
+                        <div class="col"><input asp-for="Province" class="form-control" placeholder="Province"></div>
+                        <label asp-for="TazkiraNo"></label>
+                        <div class="col"><input asp-for="TazkiraNo" class="form-control" placeholder="Tazkira Number"></div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="row">
+                        <label asp-for="District"></label>
+                        <div class="col"><input asp-for="District" class="form-control" placeholder="Province"></div>
+                        <label asp-for="HomeNo"></label>
+                        <div class="col"><input asp-for="HomeNo" class="form-control" placeholder="Tazkira Number"></div>
+                    </div>
+                </div>
+
+                <div class="custom-file">
+                    <label class="custom-file-label" asp-for="Photo"></label>
+                    <input disabled type="file" class="form-control-file">
+                    <span asp-validation-for="Photo"></span>
                 </div>
                 <div class="form-group">
-                    <input type="password" class="form-control" name="confirm_password" placeholder="Confirm Password" required="required">
+                    <div class="row">
+                        <label asp-for="Password"></label>
+                        <div class="col"><input asp-for="Password" class="form-control" placeholder="Password"></div>
+                        <label asp-for="ConfirmPassword"></label>
+                        <div class="col"><input asp-for="ConfirmPassword" class="form-control" placeholder="Confirm Password"></div>
+                    </div>
                 </div>
                 <div class="form-group">
-                    <label class="form-check-label"><input type="checkbox" required="required"> I accept the <a href="#">Terms of Use</a> &amp; <a href="#">Privacy Policy</a></label>
+                    <label class="form-check-label"><input  type="checkbox" > I accept the <a href="#">Terms of Use</a> &amp; <a href="#">Privacy Policy</a></label>
                 </div>
                 <div class="form-group">
                     <button type="submit" class="btn btn-success btn-lg btn-block">Register Now</button>

@@ -24,6 +24,7 @@ namespace GroceryStore.Controllers
             return View(_db.Users.ToList());
         }
 
+        //GET
         public IActionResult Create()
         {
             return View();

@@ -1,5 +1,6 @@
 C:\Users\Abdurrahman\source\repos\GroceryStore\GroceryStore\bin\Debug\netcoreapp3.0\appsettings.Development.json
 C:\Users\Abdurrahman\source\repos\GroceryStore\GroceryStore\bin\Debug\netcoreapp3.0\appsettings.json
+C:\Users\Abdurrahman\source\repos\GroceryStore\GroceryStore\bin\Debug\netcoreapp3.0\Properties\launchSettings.json
 C:\Users\Abdurrahman\source\repos\GroceryStore\GroceryStore\bin\Debug\netcoreapp3.0\GroceryStore.exe
 C:\Users\Abdurrahman\source\repos\GroceryStore\GroceryStore\bin\Debug\netcoreapp3.0\GroceryStore.deps.json
 C:\Users\Abdurrahman\source\repos\GroceryStore\GroceryStore\bin\Debug\netcoreapp3.0\GroceryStore.runtimeconfig.json
@@ -99,7 +100,9 @@ C:\Users\Abdurrahman\source\repos\GroceryStore\GroceryStore\bin\Debug\netcoreapp
 C:\Users\Abdurrahman\source\repos\GroceryStore\GroceryStore\bin\Debug\netcoreapp3.0\runtimes\unix\lib\netcoreapp2.0\System.Runtime.Caching.dll
 C:\Users\Abdurrahman\source\repos\GroceryStore\GroceryStore\bin\Debug\netcoreapp3.0\runtimes\win\lib\netcoreapp2.0\System.Runtime.Caching.dll
 C:\Users\Abdurrahman\source\repos\GroceryStore\GroceryStore\bin\Debug\netcoreapp3.0\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
+C:\Users\Abdurrahman\source\repos\GroceryStore\GroceryStore\obj\Debug\netcoreapp3.0\GroceryStore.csprojAssemblyReference.cache
 C:\Users\Abdurrahman\source\repos\GroceryStore\GroceryStore\obj\Debug\netcoreapp3.0\staticwebassets\GroceryStore.StaticWebAssets.Manifest.cache
+C:\Users\Abdurrahman\source\repos\GroceryStore\GroceryStore\obj\Debug\netcoreapp3.0\staticwebassets\GroceryStore.StaticWebAssets.xml
 C:\Users\Abdurrahman\source\repos\GroceryStore\GroceryStore\obj\Debug\netcoreapp3.0\GroceryStore.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\Abdurrahman\source\repos\GroceryStore\GroceryStore\obj\Debug\netcoreapp3.0\GroceryStore.RazorAssemblyInfo.cache
 C:\Users\Abdurrahman\source\repos\GroceryStore\GroceryStore\obj\Debug\netcoreapp3.0\GroceryStore.RazorAssemblyInfo.cs
@@ -108,6 +111,11 @@ C:\Users\Abdurrahman\source\repos\GroceryStore\GroceryStore\obj\Debug\netcoreapp
 C:\Users\Abdurrahman\source\repos\GroceryStore\GroceryStore\obj\Debug\netcoreapp3.0\GroceryStore.TagHelpers.input.cache
 C:\Users\Abdurrahman\source\repos\GroceryStore\GroceryStore\obj\Debug\netcoreapp3.0\GroceryStore.TagHelpers.output.cache
 C:\Users\Abdurrahman\source\repos\GroceryStore\GroceryStore\obj\Debug\netcoreapp3.0\GroceryStore.RazorCoreGenerate.cache
+C:\Users\Abdurrahman\source\repos\GroceryStore\GroceryStore\obj\Debug\netcoreapp3.0\Razor\Views\Admin\Create.cshtml.g.cs
+C:\Users\Abdurrahman\source\repos\GroceryStore\GroceryStore\obj\Debug\netcoreapp3.0\Razor\Views\Admin\Delete.cshtml.g.cs
+C:\Users\Abdurrahman\source\repos\GroceryStore\GroceryStore\obj\Debug\netcoreapp3.0\Razor\Views\Admin\Details.cshtml.g.cs
+C:\Users\Abdurrahman\source\repos\GroceryStore\GroceryStore\obj\Debug\netcoreapp3.0\Razor\Views\Admin\Edit.cshtml.g.cs
+C:\Users\Abdurrahman\source\repos\GroceryStore\GroceryStore\obj\Debug\netcoreapp3.0\Razor\Views\Admin\Index.cshtml.g.cs
 C:\Users\Abdurrahman\source\repos\GroceryStore\GroceryStore\obj\Debug\netcoreapp3.0\Razor\Views\Category\Create.cshtml.g.cs
 C:\Users\Abdurrahman\source\repos\GroceryStore\GroceryStore\obj\Debug\netcoreapp3.0\Razor\Views\Category\Delete.cshtml.g.cs
 C:\Users\Abdurrahman\source\repos\GroceryStore\GroceryStore\obj\Debug\netcoreapp3.0\Razor\Views\Category\Edit.cshtml.g.cs
@@ -126,6 +134,9 @@ C:\Users\Abdurrahman\source\repos\GroceryStore\GroceryStore\obj\Debug\netcoreapp
 C:\Users\Abdurrahman\source\repos\GroceryStore\GroceryStore\obj\Debug\netcoreapp3.0\Razor\Views\Shared\Error.cshtml.g.cs
 C:\Users\Abdurrahman\source\repos\GroceryStore\GroceryStore\obj\Debug\netcoreapp3.0\Razor\Views\Shared\_Layout.cshtml.g.cs
 C:\Users\Abdurrahman\source\repos\GroceryStore\GroceryStore\obj\Debug\netcoreapp3.0\Razor\Views\Shared\_ValidationScriptsPartial.cshtml.g.cs
+C:\Users\Abdurrahman\source\repos\GroceryStore\GroceryStore\obj\Debug\netcoreapp3.0\Razor\Views\User\Create.cshtml.g.cs
+C:\Users\Abdurrahman\source\repos\GroceryStore\GroceryStore\obj\Debug\netcoreapp3.0\Razor\Views\User\Index.cshtml.g.cs
+C:\Users\Abdurrahman\source\repos\GroceryStore\GroceryStore\obj\Debug\netcoreapp3.0\Razor\Views\User\Login.cshtml.g.cs
 C:\Users\Abdurrahman\source\repos\GroceryStore\GroceryStore\obj\Debug\netcoreapp3.0\Razor\Views\_ViewImports.cshtml.g.cs
 C:\Users\Abdurrahman\source\repos\GroceryStore\GroceryStore\obj\Debug\netcoreapp3.0\Razor\Views\_ViewStart.cshtml.g.cs
 C:\Users\Abdurrahman\source\repos\GroceryStore\GroceryStore\obj\Debug\netcoreapp3.0\GroceryStore.RazorTargetAssemblyInfo.cache
@@ -134,14 +145,3 @@ C:\Users\Abdurrahman\source\repos\GroceryStore\GroceryStore\obj\Debug\netcoreapp
 C:\Users\Abdurrahman\source\repos\GroceryStore\GroceryStore\obj\Debug\netcoreapp3.0\GroceryStore.csproj.CopyComplete
 C:\Users\Abdurrahman\source\repos\GroceryStore\GroceryStore\obj\Debug\netcoreapp3.0\GroceryStore.dll
 C:\Users\Abdurrahman\source\repos\GroceryStore\GroceryStore\obj\Debug\netcoreapp3.0\GroceryStore.pdb
-C:\Users\Abdurrahman\source\repos\GroceryStore\GroceryStore\obj\Debug\netcoreapp3.0\staticwebassets\GroceryStore.StaticWebAssets.xml
-C:\Users\Abdurrahman\source\repos\GroceryStore\GroceryStore\bin\Debug\netcoreapp3.0\Properties\launchSettings.json
-C:\Users\Abdurrahman\source\repos\GroceryStore\GroceryStore\obj\Debug\netcoreapp3.0\GroceryStore.csprojAssemblyReference.cache
-C:\Users\Abdurrahman\source\repos\GroceryStore\GroceryStore\obj\Debug\netcoreapp3.0\Razor\Views\User\Index.cshtml.g.cs
-C:\Users\Abdurrahman\source\repos\GroceryStore\GroceryStore\obj\Debug\netcoreapp3.0\Razor\Views\Admin\Create.cshtml.g.cs
-C:\Users\Abdurrahman\source\repos\GroceryStore\GroceryStore\obj\Debug\netcoreapp3.0\Razor\Views\Admin\Delete.cshtml.g.cs
-C:\Users\Abdurrahman\source\repos\GroceryStore\GroceryStore\obj\Debug\netcoreapp3.0\Razor\Views\Admin\Details.cshtml.g.cs
-C:\Users\Abdurrahman\source\repos\GroceryStore\GroceryStore\obj\Debug\netcoreapp3.0\Razor\Views\Admin\Edit.cshtml.g.cs
-C:\Users\Abdurrahman\source\repos\GroceryStore\GroceryStore\obj\Debug\netcoreapp3.0\Razor\Views\Admin\Index.cshtml.g.cs
-C:\Users\Abdurrahman\source\repos\GroceryStore\GroceryStore\obj\Debug\netcoreapp3.0\Razor\Views\User\Login.cshtml.g.cs
-C:\Users\Abdurrahman\source\repos\GroceryStore\GroceryStore\obj\Debug\netcoreapp3.0\Razor\Views\User\Create.cshtml.g.cs
