@@ -5,7 +5,7 @@
 <h1 class="text-primary text-center">User Create Page</h1>
 <hr />
 <div class="container">
-    <table>
+    <table class="table table-hover">
         <tr>
             <th>Name</th>
             <th>Last Name</th>
@@ -18,9 +18,29 @@
             <th>Tazkira Number</th>
             <th>Photo</th>
             <th>Password</th>
+            <th></th>
         </tr>
         @foreach (var item in Model)
         {
+    <tr>
+        <td>@item.Name</td>
+        <td>@item.LastName</td>
+        <td>@item.Phone1</td>
+        <td>@item.Phone2</td>
+        <td>@item.Email</td>
+        <td>@item.Province</td>
+        <td>@item.District</td>
+        <td>@item.HomeNo</td>
+        <td>@item.TazkiraNo</td>
+        <td>@item.Photo</td>
+        <td>@item.Password</td>
+        <td>
+            <div class="btn btn-group">
+                <a class="btn btn-primary mr-1" asp-route-id="@item.Id" asp-action="Edit">Edit</a>
+                <a class="btn btn-danger" asp-action="Delete" asp-controller="User" asp-route-id="@item.Id">Delete</a>
+            </div>
+        </td>
+    </tr>
 
         }
     </table>
